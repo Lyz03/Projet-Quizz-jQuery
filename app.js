@@ -60,12 +60,15 @@ choices.click(function (){
 })
 
 submit.click(function () {
+
+    // get the user answer
     let userChoice = null;
     choices.each(function () {
         if ($(this).attr('select') === "true")
             userChoice = $(this).val();
     })
 
+    // check if it's correct
     if (answer.includes(userChoice))
         goodP.html(goodP.html() + questionP.text() + '<br>')
     else
@@ -73,6 +76,7 @@ submit.click(function () {
 
     questionNb += 2;
 
+    // print result
     if (questionNb < 20) {
         printQuestionChoices(questionNb);
     } else {
@@ -81,6 +85,7 @@ submit.click(function () {
     }
 })
 
+// reset the game
 $('#result button').click(function () {
    questionNb = 0;
    goodP.html('');
