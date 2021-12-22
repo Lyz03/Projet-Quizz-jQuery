@@ -9,14 +9,28 @@ const wrongP = $('#wrongGuesses');
 let questionNb = 0;
 
 const answer = [
-    "question1", "choix1",
-    "question2", "choix 3",
-    "question3", "choix a"
+    "question1", "fils",
+    "question2", "join()",
+    "question3", "history.back()",
+    "question4", "XMLHttpRequest",
+    "question5", "à comparer la valeur et le type",
+    "question6", "relâche, le bouton de la souris",
+    "question7", "n'existe pas en JS",
+    "question8", "01 Janvier 1970",
+    "question9", "onBlur",
+    "question10", "navigator"
 ];
 const qAndA = [
-    'question1', ["choix1", "choix2", "choix3"],
-    'question2', ["choix 1", "choix 2", "choix 3"],
-    'question3', ["choix a", "choix b", "choix c"]
+    "L'objet 'Document', par rapport à l'objet 'Window' est :", ["père", "frère", "fils"],
+    "Quel fonction fait l'inverse de split() ?", ["append()", "join()", "concat()"],
+    "Comment afficher la page précédente du navigateur ?", ["rollback()", "c'est impossible", "history.back()"],
+    "Avec quel objet JS peut communiquer avec un serveur web ?", ["XMLHttpRequest", "http_db_query", "XMLParseRequest"],
+    "A quoi sert l'opérateur === ?", ["à comparer la valeur et le type", "à affecter après comparaison", "n'existe pas en JS"],
+    "L'événement mouseUp, se produit quand l'utilisateur :", ["click sur un élément", "place le pointeur sur un élément", "relâche, le bouton de la souris"],
+    "A quoi sert l'opérateur # = ?", ["à comparer deux nombre", "à comparer deux booléen", "n'existe pas en JS"],
+    "la valeur d'une date représente le nombre de millisecondes depuis le :", ["01 Janvier 1850", "01 Janvier 1970", "01 Janvier 1900"],
+    "Quel est l'évènement inverse de onFocus ?", ["onBlur", "onFocusOff", "onDeselect"],
+    "Quel Objet indique le navigateur de l'utilisateur ?", ["navigator", "platform", "codeName"]
 ];
 
 /**
@@ -59,24 +73,20 @@ submit.click(function () {
 
     questionNb += 2;
 
-    if (questionNb < 6) {
+    if (questionNb < 20) {
         printQuestionChoices(questionNb);
-    } else
-        end()
-
+    } else {
+        $('#result').css('display', 'block');
+        $('#game').css('display', 'none');
+    }
 })
-
-function end() {
-    $('#result').css('display', 'block')
-    $('#game').css('display', 'none')
-}
 
 $('#result button').click(function () {
    questionNb = 0;
-   printQuestionChoices(questionNb);
    goodP.html('');
    wrongP.html('');
    questionNbSpan.text('0')
+    printQuestionChoices(questionNb);
    $('#result').css('display', 'none')
    $('#game').css('display', 'block')
 });
