@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Quizz</title>
+</head>
+<body>
+
+    <h1>Quizz</h1>
+
+    <p class="right">Question : <span id="question_number">0</span> / 10</p>
+
+    <section id="game">
+        <div id="question">
+            <p>la question</p>
+        </div>
+        <div id="answer">
+            <input id="a" type="radio" name="choices">
+            <label for="a"></label>
+            <br>
+            <input id="b" type="radio" name="choices">
+            <label for="b"></label>
+            <br>
+            <input id="c" type="radio" name="choices">
+            <label for="c"></label>
+            <br>
+            <input type="submit" value="valider">
+        </div>
+    </section>
+
+    <section id="result">
+        <p id="goodGuesses"></p>
+        <p id="wrongGuesses"></p>
+        <button>Recommencer</button>
+    </section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>

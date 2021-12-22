@@ -1,0 +1,48 @@
+body {
+    font-family: sans-serif;
+    color: gray;
+}
+
+h1 {
+    text-align: center;
+}
+
+#game {
+    width: 40%;
+    border-right: 2px solid #d8b9e5;
+    border-left: 2px solid #d8b9e5;
+    margin: 3rem auto;
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.3rem;
+}
+
+#question p {
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #c5e0e5;
+}
+
+#answer {
+    font-size: 1rem;
+}
+
+.right {
+    text-align: right;
+    padding-right: 4rem;
+}
+
+input[type=submit] {
+    margin-top: 2rem;
+    border: none;
+    color: white;
+    background-color: #c5e0e5;
+    padding: 0.3rem 1rem;
+}
+
+input[type=submit]:hover {
+    background-color: #b1c7cd;
+}
+
+#result {
+    display: none;
+}
